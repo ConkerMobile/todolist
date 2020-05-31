@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.todolist6000">
+    package="com.conkermobile.todolist6000">
 
     <application
         android:allowBackup="true"

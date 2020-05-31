@@ -7,8 +7,8 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.example.todolist6000"
-        minSdkVersion 26
+        applicationId "com.conkermobile.todolist6000"
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"

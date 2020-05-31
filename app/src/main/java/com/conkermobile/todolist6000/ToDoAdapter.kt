@@ -1,4 +1,4 @@
-package com.example.todolist6000
+package com.conkermobile.todolist6000
 
 import android.content.Intent
 import android.view.LayoutInflater
