@@ -12,12 +12,10 @@ class ToDoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_create_to_do)
 
         saveButton.setOnClickListener{
-            var title: String
-            if (importantBox.isChecked) {
-                title = "❗  " + titleEditText.text.toString()
+            var title: String = if (importantBox.isChecked) {
+                "❗  " + titleEditText.text.toString()
             } else{
-                title = titleEditText.text.toString()
-
+                titleEditText.text.toString()
             }
 
             var prefs = getSharedPreferences(getString(R.string.SHARED_PREF_NAME), Context.MODE_PRIVATE)
