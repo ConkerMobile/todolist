@@ -16,8 +16,8 @@ class CompleteToDoActivity : AppCompatActivity() {
         toDoTextView.text = todo
 
         completeButton.setOnClickListener{
-            var prefs = getSharedPreferences(getString(R.string.SHARED_PREF_NAME), Context.MODE_PRIVATE)
-            var todos = prefs.getStringSet(getString(R.string.TODO_STRINGS),setOf())!!.toMutableSet()
+            val prefs = getSharedPreferences(getString(R.string.SHARED_PREF_NAME), Context.MODE_PRIVATE)
+            val todos = prefs.getStringSet(getString(R.string.TODO_STRINGS),setOf())!!.toMutableSet()
 
             todos.remove(todo)
 

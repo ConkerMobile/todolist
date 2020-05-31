@@ -1,15 +1,12 @@
 package com.conkermobile.todolist6000
 
-import android.content.AbstractThreadedSyncAdapter
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
@@ -36,8 +33,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateRecycler() {
-        var prefs = getSharedPreferences(getString(R.string.SHARED_PREF_NAME), Context.MODE_PRIVATE)
-        var todos = prefs.getStringSet(getString(R.string.TODO_STRINGS),setOf())!!.toMutableSet()
+        val prefs = getSharedPreferences(getString(R.string.SHARED_PREF_NAME), Context.MODE_PRIVATE)
+        val todos = prefs.getStringSet(getString(R.string.TODO_STRINGS),setOf())!!.toMutableSet()
 
         layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
@@ -55,7 +52,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if (item.itemId == R.id.action_delete_all) {
-            var prefs = getSharedPreferences(getString(R.string.SHARED_PREF_NAME), Context.MODE_PRIVATE)
+            val prefs = getSharedPreferences(getString(R.string.SHARED_PREF_NAME), Context.MODE_PRIVATE)
             prefs.edit().putStringSet(getString(R.string.TODO_STRINGS),null).apply()
             updateRecycler()
 

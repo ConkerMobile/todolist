@@ -12,14 +12,14 @@ class ToDoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_create_to_do)
 
         saveButton.setOnClickListener{
-            var title: String = if (importantBox.isChecked) {
+            val title: String = if (importantBox.isChecked) {
                 "❗  " + titleEditText.text.toString()
             } else{
                 titleEditText.text.toString()
             }
 
-            var prefs = getSharedPreferences(getString(R.string.SHARED_PREF_NAME), Context.MODE_PRIVATE)
-            var todos = prefs.getStringSet(getString(R.string.TODO_STRINGS),setOf())!!.toMutableSet()
+            val prefs = getSharedPreferences(getString(R.string.SHARED_PREF_NAME), Context.MODE_PRIVATE)
+            val todos = prefs.getStringSet(getString(R.string.TODO_STRINGS),setOf())!!.toMutableSet()
             todos.add(title)
 
             prefs.edit().putStringSet("todostrings",todos).apply()
