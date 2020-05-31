@@ -12,7 +12,7 @@ class ToDoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_create_to_do)
 
         saveButton.setOnClickListener{
-            var title = ""
+            var title: String
             if (importantBox.isChecked) {
                 title = "❗  " + titleEditText.text.toString()
             } else{
